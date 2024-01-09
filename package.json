@@ -1,0 +1,21 @@
+{
+  "name": "reactjs-airflex",
+  "version": "1.0.0",
+  "description": "Airflex ReactJS Component Library",
+  "keywords": [
+    "react",
+    "reactjs",
+    "component",
+    "library",
+    "airflex",
+    "mmp",
+    "analytics",
+    "marketing"
+  ],
+  "main": "airflex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Airflex.io",
+  "license": "MIT"
+}
