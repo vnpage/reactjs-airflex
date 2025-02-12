@@ -1,7 +1,11 @@
 {
   "name": "reactjs-airflex",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Airflex ReactJS Component Library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnpage/reactjs-airflex.git"
+  },
   "keywords": [
     "react",
     "reactjs",
@@ -12,10 +16,19 @@
     "analytics",
     "marketing"
   ],
-  "main": "airflex.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "author": "Airflex.io",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vnpage/reactjs-airflex/issues"
+  },
+  "homepage": "https://github.com/vnpage/reactjs-airflex#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
