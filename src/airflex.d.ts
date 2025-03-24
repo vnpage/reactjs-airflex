@@ -4,6 +4,7 @@ export declare class AirflexJS {
     setPageView(pageName: String, data: [String: any]): void;
     setUserProperties(data: [String: any]): void;
     setUserId(userId: String): void;
+    pushAds(data: [String: any]): void;
 }
 declare const Airflex: AirflexJS;
 export default Airflex;

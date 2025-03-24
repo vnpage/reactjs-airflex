@@ -5,6 +5,7 @@ export function setPageView(pageName: any, data?: {}): void;
 export function setUserId(userId: any): void;
 export function setUserProperties(data?: {}): void;
 export function getDeviceId(): any;
+export function pushAds(data?: {}): void;
 export const AirflexJS: Airflex;
 declare class Airflex {
     setPageView(pageName: any, data?: {}): void;
@@ -13,4 +14,5 @@ declare class Airflex {
     setUserId(userId: any): void;
     create(key: any, config?: {}): void;
     getDeviceId(): any;
+    pushAds(data?: {}): void;
 }

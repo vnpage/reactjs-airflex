@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AirflexJS = exports.getDeviceId = exports.setUserProperties = exports.setUserId = exports.setPageView = exports.logEvent = exports.create = void 0;
+exports.AirflexJS = exports.pushAds = exports.getDeviceId = exports.setUserProperties = exports.setUserId = exports.setPageView = exports.logEvent = exports.create = void 0;
 const AirflexSDK = __importStar(require("./airflex"));
 const setPageView = (pageName, data = {}) => {
     AirflexSDK.setPageView(pageName, data);
@@ -41,6 +41,10 @@ const setUserId = (userId) => {
     AirflexSDK.setUserId(userId);
 };
 exports.setUserId = setUserId;
+const pushAds = (data = {}) => {
+    AirflexSDK.pushAds(data);
+};
+exports.pushAds = pushAds;
 const create = (key, config = {}) => {
     AirflexSDK.create(key, config);
 };
@@ -67,6 +71,9 @@ class Airflex {
     }
     getDeviceId() {
         return getDeviceId();
+    }
+    pushAds(data = {}) {
+        pushAds(data);
     }
 }
 const AirflexJS = new Airflex();

@@ -16,6 +16,10 @@ const setUserId = (userId) => {
     AirflexSDK.setUserId(userId);
 }
 
+const pushAds = (data = {}) => {
+    AirflexSDK.pushAds(data);
+}
+
 const create = (key, config = {}) => {
     AirflexSDK.create(key, config);
 }
@@ -48,12 +52,16 @@ class Airflex {
     getDeviceId() {
         return getDeviceId();
     }
+
+    pushAds(data = {}) {
+        pushAds(data);
+    }
 }
 
 const AirflexJS = new Airflex()
 
 export {
-    create, logEvent, setPageView, setUserId, setUserProperties, getDeviceId, AirflexJS
+    create, logEvent, setPageView, setUserId, setUserProperties, getDeviceId, pushAds, AirflexJS
 }
 
 export default AirflexJS;
