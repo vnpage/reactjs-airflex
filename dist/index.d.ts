@@ -6,6 +6,8 @@ export function setUserId(userId: any): void;
 export function setUserProperties(data?: {}): void;
 export function getDeviceId(): any;
 export function pushAds(data?: {}): void;
+export function fetchAds(adId: any, adType: any): void;
+export function trackingAds(adId: any, action: any, elId: any): void;
 export const AirflexJS: Airflex;
 declare class Airflex {
     setPageView(pageName: any, data?: {}): void;
@@ -15,4 +17,6 @@ declare class Airflex {
     create(key: any, config?: {}): void;
     getDeviceId(): any;
     pushAds(data?: {}): void;
+    fetchAds(adId: any, adType: any): void;
+    trackingAds(adId: any, action: any, elId: any): void;
 }

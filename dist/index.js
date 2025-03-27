@@ -33,7 +33,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AirflexJS = exports.pushAds = exports.getDeviceId = exports.setUserProperties = exports.setUserId = exports.setPageView = exports.logEvent = exports.create = void 0;
+exports.AirflexJS = exports.trackingAds = exports.fetchAds = exports.pushAds = exports.getDeviceId = exports.setUserProperties = exports.setUserId = exports.setPageView = exports.logEvent = exports.create = void 0;
 const AirflexSDK = __importStar(require("./airflex"));
 const setPageView = (pageName, data = {}) => {
     AirflexSDK.setPageView(pageName, data);
@@ -55,6 +55,14 @@ const pushAds = (data = {}) => {
     AirflexSDK.pushAds(data);
 };
 exports.pushAds = pushAds;
+const fetchAds = (adId, adType) => {
+    AirflexSDK.fetchAds(adId, adType);
+};
+exports.fetchAds = fetchAds;
+const trackingAds = (adId, action, elId) => {
+    AirflexSDK.trackingAds(adId, action, elId);
+};
+exports.trackingAds = trackingAds;
 const create = (key, config = {}) => {
     AirflexSDK.create(key, config);
 };
@@ -84,6 +92,12 @@ class Airflex {
     }
     pushAds(data = {}) {
         pushAds(data);
+    }
+    fetchAds(adId, adType) {
+        fetchAds(adId, adType);
+    }
+    trackingAds(adId, action, elId) {
+        trackingAds(adId, action, elId);
     }
 }
 const AirflexJS = new Airflex();

@@ -20,6 +20,14 @@ const pushAds = (data = {}) => {
     AirflexSDK.pushAds(data);
 }
 
+const fetchAds = (adId, adType) => {
+    AirflexSDK.fetchAds(adId, adType);
+}
+
+const trackingAds = (adId, action, elId) => {
+    AirflexSDK.trackingAds(adId, action, elId);
+}
+
 const create = (key, config = {}) => {
     AirflexSDK.create(key, config);
 }
@@ -56,12 +64,20 @@ class Airflex {
     pushAds(data = {}) {
         pushAds(data);
     }
+
+    fetchAds(adId, adType){
+        fetchAds(adId, adType);
+    }
+
+    trackingAds(adId, action, elId){
+        trackingAds(adId, action, elId);
+    }
 }
 
 const AirflexJS = new Airflex()
 
 export {
-    create, logEvent, setPageView, setUserId, setUserProperties, getDeviceId, pushAds, AirflexJS
+    create, logEvent, setPageView, setUserId, setUserProperties, getDeviceId, pushAds, fetchAds, trackingAds, AirflexJS
 }
 
 export default AirflexJS;
