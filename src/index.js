@@ -21,11 +21,11 @@ const pushAds = (data = {}) => {
 }
 
 const fetchAds = (adId, adType) => {
-    AirflexSDK.fetchAds(adId, adType);
+    return AirflexSDK.fetchAds(adId, adType);
 }
 
 const trackingAds = (adId, action, elId) => {
-    AirflexSDK.trackingAds(adId, action, elId);
+    return AirflexSDK.trackingAds(adId, action, elId);
 }
 
 const create = (key, config = {}) => {
@@ -66,11 +66,11 @@ class Airflex {
     }
 
     fetchAds(adId, adType){
-        fetchAds(adId, adType);
+        return fetchAds(adId, adType);
     }
 
     trackingAds(adId, action, elId){
-        trackingAds(adId, action, elId);
+        return trackingAds(adId, action, elId);
     }
 }
 
