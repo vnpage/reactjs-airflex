@@ -56,11 +56,11 @@ const pushAds = (data = {}) => {
 };
 exports.pushAds = pushAds;
 const fetchAds = (adId, adType) => {
-    AirflexSDK.fetchAds(adId, adType);
+    return AirflexSDK.fetchAds(adId, adType);
 };
 exports.fetchAds = fetchAds;
 const trackingAds = (adId, action, elId) => {
-    AirflexSDK.trackingAds(adId, action, elId);
+    return AirflexSDK.trackingAds(adId, action, elId);
 };
 exports.trackingAds = trackingAds;
 const create = (key, config = {}) => {
@@ -94,10 +94,10 @@ class Airflex {
         pushAds(data);
     }
     fetchAds(adId, adType) {
-        fetchAds(adId, adType);
+        return fetchAds(adId, adType);
     }
     trackingAds(adId, action, elId) {
-        trackingAds(adId, action, elId);
+        return trackingAds(adId, action, elId);
     }
 }
 const AirflexJS = new Airflex();
